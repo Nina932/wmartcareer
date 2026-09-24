@@ -75,9 +75,7 @@
       gap: clamp(28px, 5vw, 74px);
       align-items: center;
       padding: clamp(34px, 6vw, 84px) clamp(18px, 5vw, 64px) 42px;
-      background:
-        radial-gradient(circle at 76% 20%, rgba(246,199,68,.34), transparent 30%),
-        linear-gradient(135deg, #ffffff 0%, #edf5ff 54%, #fff7d7 100%);
+      background: #f5f4ef;
       overflow: hidden;
     }
     .eyebrow { color: var(--red); font-weight: 900; margin: 0 0 14px; }
@@ -113,9 +111,8 @@
     .market-frame::before {
       content: "";
       position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(8,47,99,.08), rgba(8,47,99,.78)),
-        url("https://sgp.ge/_next/image?q=75&url=https%3A%2F%2Ffs01-tb.sgp.ge%2Fapi%2Fv1%2Fbuckets%2Fsocar-s3%2Fobjects%2Fdownload%3Fpreview%3Dtrue%26prefix%3DSL_778c14d3-9e64-4c51-ad94-d342e55bcc09_LMP_3976-Edit+%281%29.jpg&w=3840") center/cover;
+        linear-gradient(180deg, rgba(8,47,99,.02), rgba(8,47,99,.82)),
+        url("assets/waymart-storefront.jpg") center/cover;
       z-index: -1;
     }
     .floating-shift {
@@ -177,6 +174,8 @@
     .role p { margin: 0; color: rgba(255,255,255,.76); }
 
     .stories { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; align-items: stretch; }
+    .story-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+    .story-gallery img { width: 100%; height: 270px; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
     .story-main {
       min-height: 530px;
       color: white;
@@ -185,7 +184,7 @@
       justify-content: flex-end;
       background:
         linear-gradient(180deg, rgba(8,47,99,.06), rgba(8,47,99,.86)),
-        url("https://fs01-tb.sgp.ge/api/v1/buckets/socar-s3/objects/download?prefix=IV_M_7536906b-4e83-4cc6-b331-9bc0ca3a47af__IMG6439+%281%29+%281%29+%281%29.jpg&preview=true") center/cover;
+        url("assets/waymart-story-1.avif") center/cover;
       border-radius: 8px;
       padding: clamp(22px, 4vw, 42px);
       overflow: hidden;
@@ -268,6 +267,7 @@
     @media (max-width: 620px) {
       .hero { min-height: auto; padding-top: 28px; }
       .proof, .feature-list, .roles, .benefits { grid-template-columns: 1fr; }
+      .story-gallery { grid-template-columns: 1fr; }
       .market-frame { min-height: 430px; border-radius: 20px; }
       .floating-shift { left: 14px; right: 14px; bottom: 14px; }
       .button { width: 100%; }
@@ -295,11 +295,11 @@
     <header class="hero">
       <div>
         <p class="eyebrow">კარიერა Way Mart-ში</p>
-        <h1>გზაზე მეგობარი მარკეტი იწყება ადამიანებით.</h1>
-        <p class="lead">Way Mart არის SOCAR-ის მარკეტების ქსელი, სადაც სწრაფი მომსახურება, იტალიური ყავა, ცხელი საკვები და ყოველდღიური პროდუქტები ერთიანდება გუნდურ, ცოცხალ სამუშაო გარემოში.</p>
+        <h1>შენი შემდეგი ნაბიჯი იწყება Way Mart-ში.</h1>
+        <p class="lead">გახდი იმ გუნდის ნაწილი, რომელიც გზაზე ადამიანებს ყავას, საკვებს, საჭირო პროდუქტებს და კარგ განწყობას ხვდება. აქ სამუშაო ყოველდღიურ მოძრაობას, რეალურ პასუხისმგებლობას და ადამიანურ ურთიერთობას აერთიანებს.</p>
         <div class="hero-actions">
           <a class="button primary" href="#apply">ნახე ვაკანსიები</a>
-          <a class="button secondary" href="#stories">გაიცანი გუნდი</a>
+          <a class="button secondary" href="#stories">ნახე Way Mart-ის ცხოვრება</a>
         </div>
         <div class="proof" aria-label="Way Mart-ის მოკლე ფაქტები">
           <div><strong>70+</strong><span>SOCAR-ის სადგურზე წარმოდგენილი მარკეტი</span></div>
@@ -318,7 +318,7 @@
     <section id="brand">
       <div class="section-head">
         <h2>Way Mart როგორც ბრენდი</h2>
-        <p>ეს არ არის მხოლოდ სადგურის მარკეტი. Way Mart გზაზე პატარა პაუზაა: ადგილი, სადაც მომხმარებელი იღებს სწრაფ პროდუქტს, თბილ მომსახურებას და ენერგიას შემდეგი გზისთვის.</p>
+        <p>Way Mart არის SOCAR-ის სადგურებზე შექმნილი თანამედროვე convenience-მარკეტი: სწრაფი, ცოცხალი და ადამიანებზე ორიენტირებული. თანამშრომელი ამ გამოცდილების ცენტრშია.</p>
       </div>
       <div class="brand-grid">
         <article class="panel">
@@ -358,7 +358,7 @@
     <section id="stories">
       <div class="section-head">
         <h2>ადამიანები, ვისთან ერთადაც იმუშავებ</h2>
-        <p>ამ გვერდზე ისტორიები წარმოდგენილია როგორც კარიერული სცენარები Way Mart-ის რეალური როლებიდან: ყოველდღიური შინაარსი, ემოცია და განვითარების გზა.</p>
+        <p>Way Mart-ში თითოეული დღე განსხვავებულია: ახალი სტუმარი, ახალი სიტუაცია, ახალი პატარა გამარჯვება. ეს არის სამუშაო, რომელსაც შედეგი იმავე დღეს ეტყობა.</p>
       </div>
       <div class="stories">
         <article class="story-main">
@@ -370,6 +370,10 @@
           <article class="quote"><p>“საწყობში უხილავი საქმე ჩანს მაშინ, როცა მაღაზიაში არაფერი აკლია. ჩემი სიზუსტე პირდაპირ აისახება მომხმარებლის გამოცდილებაზე.”</p><b>გიორგი, საწყობის ადმინისტრატორის სცენარი</b></article>
           <article class="quote"><p>“მენეჯერისთვის მთავარი მხოლოდ კონტროლი არ არის. უნდა დაინახო გუნდი, მარაგი, სტანდარტი და გაყიდვების შესაძლებლობა ერთ სურათად.”</p><b>თამარი, რეგიონალური მენეჯერის სცენარი</b></article>
         </div>
+      </div>
+      <div class="story-gallery" aria-label="Way Mart-ის ვიზუალური ისტორიები">
+        <img src="assets/waymart-story-2.avif" alt="Way Mart-ის გუნდისა და სამუშაო გარემოს ფოტო">
+        <img src="assets/waymart-storefront.jpg" alt="Way Mart-ის მარკეტის ფასადი ქალაქში">
       </div>
     </section>
 
@@ -392,17 +396,17 @@
       <div class="embed-wrap">
         <article class="apply-card">
           <div>
-            <p class="eyebrow">შემდეგი ნაბიჯი</p>
-            <h2>შეავსე განაცხადი და აირჩიე როლი, სადაც შენი ენერგია ყველაზე კარგად იმუშავებს.</h2>
-            <p>ქვემოთ ჩაშენებულია მოწოდებული ChatGPT გაზიარებული კონტექსტი. განაცხადის ოფიციალური ბმული კი გადაგიყვანს Way Mart-ის რეკრუტინგის ფორმაზე.</p>
+            <p class="eyebrow">გელოდებით გუნდში</p>
+            <h2>შეავსე განაცხადი. დანარჩენს ერთად გავივლით.</h2>
+            <p>გაეცანი პოზიციებს, პირობებს და Way Mart-ის სამუშაო სამყაროს. შენი განაცხადი პირდაპირ ოფიციალურ რეკრუტინგის გვერდზე გაიგზავნება.</p>
           </div>
           <div class="apply-links">
             <a class="button primary" href="https://waymart.selfrecruit.ge/e8e7ca79-c3fc-475c-9c01-bfde96354572" target="_blank" rel="noreferrer">ოფიციალური განაცხადი <span>→</span></a>
             <a class="button secondary" href="https://sgp.ge/way-mart" target="_blank" rel="noreferrer">Way Mart-ის გვერდი <span>→</span></a>
-            <a class="button secondary" href="https://chatgpt.com/share/6ab540fb-7afc-83ed-9b41-36cf7bb948d3" target="_blank" rel="noreferrer">ChatGPT კონტექსტი <span>→</span></a>
+            <a class="button secondary" href="https://chatgpt.com/s/cx_6ab544e12a40819196d0f85522e5df99" target="_blank" rel="noreferrer">ნახე ჩაშენებული ისტორია <span>→</span></a>
           </div>
         </article>
-        <iframe class="chat-embed" src="https://chatgpt.com/share/6ab540fb-7afc-83ed-9b41-36cf7bb948d3" title="ჩაშენებული ChatGPT კონტექსტი"></iframe>
+        <iframe class="chat-embed" src="https://chatgpt.com/s/cx_6ab544e12a40819196d0f85522e5df99" title="Way Mart-ის ჩაშენებული ისტორია"></iframe>
       </div>
     </section>
   </main>
