@@ -130,7 +130,7 @@ export default function Home() {
         <div className="intro-image">
           <Image
             src="/media/waymart-storefront.jpg"
-            alt="Way Mart-ийн дэлгүүр SOCAR-ийн станц дээр"
+            alt="Way Mart-ის მაღაზია SOCAR-ის სადგურზე"
             fill
             sizes="(max-width: 800px) 100vw, 40vw"
           />
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="product-card photo">
             <Image
               src="/media/waymart-story-1.avif"
-              alt="Way Mart-ийн бүтээгдэхүүн, дэлгүүрийн орчин"
+              alt="Way Mart-ის პროდუქტი და მაღაზიის გარემო"
               fill
               sizes="30vw"
             />
