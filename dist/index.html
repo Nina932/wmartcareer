@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Way Mart Careers | კარიერა გზაზე მეგობარ გუნდში</title>
+  <meta name="description" content="Way Mart-ის თანამედროვე კარიერის გვერდი: ბრენდი, სამუშაო გარემო, ბენეფიტები, თანამშრომლების ისტორიები და განაცხადის ბმული.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2f63'/%3E%3Cpath d='M13 39h38v7H13z' fill='%23f6c744'/%3E%3Cpath d='M16 18h32l-5 17H21z' fill='%23fff'/%3E%3Ccircle cx='24' cy='49' r='4' fill='%23fff'/%3E%3Ccircle cx='43' cy='49' r='4' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --blue: #082f63;
+      --blue-2: #0b4c9c;
+      --red: #ef3340;
+      --yellow: #f6c744;
+      --ink: #101828;
+      --muted: #667085;
+      --line: rgba(16, 24, 40, .12);
+      --milk: #f7fafc;
+      --white: #fff;
+      --green: #1c8f62;
+      --shadow: 0 24px 70px rgba(8, 47, 99, .14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans Georgian", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--milk);
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px clamp(18px, 5vw, 64px);
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; color: var(--blue); }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: grid; place-items: center;
+      background: var(--blue);
+      color: var(--yellow);
+      box-shadow: inset 0 -8px 0 rgba(246,199,68,.18);
+    }
+    .nav-links { display: flex; align-items: center; gap: 22px; color: #344054; font-size: .95rem; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 12px 18px; border-radius: 999px;
+      border: 1px solid transparent; font-weight: 800; cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .primary { background: var(--red); color: white; box-shadow: 0 16px 30px rgba(239,51,64,.22); }
+    .secondary { background: white; color: var(--blue); border-color: rgba(8,47,99,.16); }
+
+    .hero {
+      min-height: calc(100vh - 70px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, .88fr);
+      gap: clamp(28px, 5vw, 74px);
+      align-items: center;
+      padding: clamp(34px, 6vw, 84px) clamp(18px, 5vw, 64px) 42px;
+      background:
+        radial-gradient(circle at 76% 20%, rgba(246,199,68,.34), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #edf5ff 54%, #fff7d7 100%);
+      overflow: hidden;
+    }
+    .eyebrow { color: var(--red); font-weight: 900; margin: 0 0 14px; }
+    h1 {
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(2.25rem, 6vw, 5.7rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      max-width: 920px;
+    }
+    .lead { margin: 22px 0 0; max-width: 680px; font-size: clamp(1rem, 1.5vw, 1.25rem); color: #344054; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; max-width: 760px; }
+    .proof div {
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(8,47,99,.1);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .proof strong { display: block; color: var(--blue); font-size: 1.35rem; }
+    .proof span { color: var(--muted); font-size: .9rem; }
+
+    .market-frame {
+      position: relative;
+      min-height: 590px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: #0b1f3f;
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+    .market-frame::before {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(8,47,99,.08), rgba(8,47,99,.78)),
+        url("https://sgp.ge/_next/image?q=75&url=https%3A%2F%2Ffs01-tb.sgp.ge%2Fapi%2Fv1%2Fbuckets%2Fsocar-s3%2Fobjects%2Fdownload%3Fpreview%3Dtrue%26prefix%3DSL_778c14d3-9e64-4c51-ad94-d342e55bcc09_LMP_3976-Edit+%281%29.jpg&w=3840") center/cover;
+      z-index: -1;
+    }
+    .floating-shift {
+      position: absolute; left: 24px; right: 24px; bottom: 24px;
+      display: grid; gap: 12px;
+      color: white;
+    }
+    .shift-card {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.32);
+      backdrop-filter: blur(18px);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .shift-card b { color: var(--yellow); }
+
+    section { padding: clamp(54px, 8vw, 108px) clamp(18px, 5vw, 64px); }
+    .section-head { max-width: 860px; margin-bottom: 34px; }
+    h2 { margin: 0; color: var(--blue); font-size: clamp(1.8rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: 0; }
+    .section-head p { margin: 14px 0 0; color: var(--muted); font-size: 1.06rem; }
+
+    .brand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .panel {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(20px, 3vw, 34px);
+      box-shadow: 0 12px 40px rgba(16,24,40,.06);
+    }
+    .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+    .feature {
+      border: 1px solid rgba(8,47,99,.12);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fbfdff;
+    }
+    .feature b { color: var(--blue); display: block; margin-bottom: 5px; }
+    .feature span { color: var(--muted); font-size: .95rem; }
+
+    .journey {
+      background: var(--blue);
+      color: white;
+    }
+    .journey h2 { color: white; }
+    .journey .section-head p { color: rgba(255,255,255,.74); }
+    .roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .role {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .role small { color: var(--yellow); font-weight: 800; }
+    .role h3 { margin: 10px 0; font-size: 1.22rem; }
+    .role p { margin: 0; color: rgba(255,255,255,.76); }
+
+    .stories { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; align-items: stretch; }
+    .story-main {
+      min-height: 530px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(180deg, rgba(8,47,99,.06), rgba(8,47,99,.86)),
+        url("https://fs01-tb.sgp.ge/api/v1/buckets/socar-s3/objects/download?prefix=IV_M_7536906b-4e83-4cc6-b331-9bc0ca3a47af__IMG6439+%281%29+%281%29+%281%29.jpg&preview=true") center/cover;
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 42px);
+      overflow: hidden;
+    }
+    .story-main h3 { margin: 0 0 8px; font-size: clamp(1.6rem, 3vw, 2.5rem); }
+    .story-main p { margin: 0; max-width: 650px; color: rgba(255,255,255,.86); }
+    .story-stack { display: grid; gap: 14px; }
+    .quote { background: white; border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+    .quote p { margin: 0; color: #344054; }
+    .quote b { display: block; color: var(--blue); margin-top: 16px; }
+
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .benefit {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .benefit .icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: grid; place-items: center; margin-bottom: 14px;
+      background: #eaf3ff; color: var(--blue); font-weight: 900;
+    }
+    .benefit h3 { margin: 0 0 8px; color: var(--blue); }
+    .benefit p { margin: 0; color: var(--muted); }
+
+    .embed-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(320px, 1.15fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .chat-embed {
+      width: 100%;
+      min-height: 620px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+    .apply-card {
+      background: linear-gradient(145deg, var(--blue), #071a37);
+      color: white;
+      border-radius: 8px;
+      padding: clamp(24px, 4vw, 44px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .apply-card h2 { color: white; }
+    .apply-card p { color: rgba(255,255,255,.78); }
+    .apply-links { display: grid; gap: 12px; }
+    .apply-links a { justify-content: space-between; border-radius: 8px; }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-top: 1px solid var(--line);
+      padding: 24px clamp(18px, 5vw, 64px);
+    }
+    .social-strip b { color: var(--blue); }
+    .socials { display: flex; gap: 10px; flex-wrap: wrap; }
+    footer {
+      padding: 26px clamp(18px, 5vw, 64px);
+      color: #667085;
+      font-size: .92rem;
+      background: #f0f5fb;
+    }
+
+    @media (max-width: 980px) {
+      .hero, .brand-grid, .stories, .embed-wrap { grid-template-columns: 1fr; }
+      .market-frame { min-height: 520px; }
+      .roles, .benefits { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 620px) {
+      .hero { min-height: auto; padding-top: 28px; }
+      .proof, .feature-list, .roles, .benefits { grid-template-columns: 1fr; }
+      .market-frame { min-height: 430px; border-radius: 20px; }
+      .floating-shift { left: 14px; right: 14px; bottom: 14px; }
+      .button { width: 100%; }
+      .chat-embed { min-height: 520px; }
+      section { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="მთავარი ნავიგაცია">
+    <a class="brand" href="#top" aria-label="Way Mart Careers">
+      <span class="brand-mark">WM</span>
+      <span>Way Mart Careers</span>
+    </a>
+    <div class="nav-links">
+      <a href="#brand">ბრენდი</a>
+      <a href="#roles">როლები</a>
+      <a href="#stories">ისტორიები</a>
+      <a href="#apply">განაცხადი</a>
+    </div>
+    <a class="button primary" href="https://waymart.selfrecruit.ge/e8e7ca79-c3fc-475c-9c01-bfde96354572" target="_blank" rel="noreferrer">განაცხადის შევსება</a>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">კარიერა Way Mart-ში</p>
+        <h1>გზაზე მეგობარი მარკეტი იწყება ადამიანებით.</h1>
+        <p class="lead">Way Mart არის SOCAR-ის მარკეტების ქსელი, სადაც სწრაფი მომსახურება, იტალიური ყავა, ცხელი საკვები და ყოველდღიური პროდუქტები ერთიანდება გუნდურ, ცოცხალ სამუშაო გარემოში.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#apply">ნახე ვაკანსიები</a>
+          <a class="button secondary" href="#stories">გაიცანი გუნდი</a>
+        </div>
+        <div class="proof" aria-label="Way Mart-ის მოკლე ფაქტები">
+          <div><strong>70+</strong><span>SOCAR-ის სადგურზე წარმოდგენილი მარკეტი</span></div>
+          <div><strong>24/7</strong><span>მომხმარებლისთვის გზაზე ხელმისაწვდომი გამოცდილება</span></div>
+          <div><strong>ყავა, საკვები, შეთავაზებები</strong><span>ყოველდღიური ენერგია ერთ სივრცეში</span></div>
+        </div>
+      </div>
+      <div class="market-frame" role="img" aria-label="Way Mart-ის მარკეტის ატმოსფერო">
+        <div class="floating-shift">
+          <div class="shift-card"><b>დღის რიტმი:</b> დილის ყავა, სწრაფი ლანჩი, გზად შეჩერებული სტუმრები და გუნდი, რომელიც ყველაფერს აწესრიგებს.</div>
+          <div class="shift-card"><b>სამუშაო აზრი:</b> ყოველი ცვლა არის მომსახურების, სისუფთავის, პასუხისმგებლობის და ადამიანური კომუნიკაციის პრაქტიკა.</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="brand">
+      <div class="section-head">
+        <h2>Way Mart როგორც ბრენდი</h2>
+        <p>ეს არ არის მხოლოდ სადგურის მარკეტი. Way Mart გზაზე პატარა პაუზაა: ადგილი, სადაც მომხმარებელი იღებს სწრაფ პროდუქტს, თბილ მომსახურებას და ენერგიას შემდეგი გზისთვის.</p>
+      </div>
+      <div class="brand-grid">
+        <article class="panel">
+          <h3>რას ხედავს მომხმარებელი</h3>
+          <div class="feature-list">
+            <div class="feature"><b>ექსკლუზიური პროდუქცია</b><span>გზისთვის მარტივად ასაღები არჩევანი.</span></div>
+            <div class="feature"><b>იტალიური ყავა</b><span>სადგურზე გაჩერების ერთ-ერთი მთავარი მიზეზი.</span></div>
+            <div class="feature"><b>ჰოთ-დოგი და ცომეული</b><span>სწრაფი კვება რეალური ყოველდღიური მოთხოვნისთვის.</span></div>
+            <div class="feature"><b>აქციები და ბონუსები</b><span>მუდმივი შეთავაზებები და Top Card-ის ლოგიკა.</span></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>რას ქმნის თანამშრომელი</h3>
+          <div class="feature-list">
+            <div class="feature"><b>მოწესრიგებული თაროები</b><span>პროდუქტი ჩანს, მარაგი კონტროლდება, სივრცე სუფთაა.</span></div>
+            <div class="feature"><b>სწრაფი სალარო</b><span>ნაღდი და უნაღდო მომსახურება მშვიდად და ყურადღებით.</span></div>
+            <div class="feature"><b>სტუმრის განწყობა</b><span>თავაზიანი პასუხი ხშირად ბრენდის ყველაზე დასამახსოვრებელი ნაწილია.</span></div>
+            <div class="feature"><b>გუნდის რიტმი</b><span>მენეჯერი, კონსულტანტი და საწყობი ერთ გამოცდილებას აწყობენ.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="journey" id="roles">
+      <div class="section-head">
+        <h2>სად შეიძლება დაიწყო</h2>
+        <p>ვაკანსიები იცვლება, მაგრამ Way Mart-ის სამუშაო ოჯახი ერთ იდეაზე დგას: პასუხისმგებლობა, სწრაფი გადაწყვეტილება და ზრუნვა სტუმარზე.</p>
+      </div>
+      <div class="roles">
+        <article class="role"><small>მარკეტის სახე</small><h3>მოლარე-კონსულტანტი</h3><p>მომსახურება, სალარო, პროდუქტის განლაგება, ვადების შემოწმება და მომხმარებელთან ყოველდღიური კომუნიკაცია.</p></article>
+        <article class="role"><small>ოპერაციული სიზუსტე</small><h3>საწყობის ადმინისტრატორი</h3><p>მიღება-გაცემა, მარაგები, შეკვეთების სწორად შეგროვება და პროცესის ზუსტი აღრიცხვა.</p></article>
+        <article class="role"><small>ლიდერობა</small><h3>რეგიონალური მენეჯერი</h3><p>ფილიალების სტანდარტი, გუნდის მართვა, გაყიდვების ზრდა, პროგრამებში მუშაობა და მარაგების კონტროლი.</p></article>
+        <article class="role"><small>გზა წინ</small><h3>განვითარების როლი</h3><p>გამოცდილება საცალო ვაჭრობაში, Excel-ის ცოდნა, კომუნიკაცია და ზრდაზე ორიენტირებული აზროვნება აქ რეალურ უპირატესობად იქცევა.</p></article>
+      </div>
+    </section>
+
+    <section id="stories">
+      <div class="section-head">
+        <h2>ადამიანები, ვისთან ერთადაც იმუშავებ</h2>
+        <p>ამ გვერდზე ისტორიები წარმოდგენილია როგორც კარიერული სცენარები Way Mart-ის რეალური როლებიდან: ყოველდღიური შინაარსი, ემოცია და განვითარების გზა.</p>
+      </div>
+      <div class="stories">
+        <article class="story-main">
+          <h3>“ყველაზე კარგი ცვლა ისაა, როცა სტუმარი ჩქარობს, მაგრამ მაინც ღიმილით გადის.”</h3>
+          <p>მარკეტის გუნდი ხშირად პირველი ადამიანია, ვისაც გზაზე გაჩერებული მომხმარებელი ხვდება. ამიტომ აქ სისწრაფე და კეთილგანწყობა ერთად ფასობს.</p>
+        </article>
+        <div class="story-stack">
+          <article class="quote"><p>“პირველ კვირას ყველაზე მეტად პროცედურები მაშფოთებდა. მერე მივხვდი, რომ წესრიგი მეხმარება: თარო, სალარო და სტუმარი ერთ რიტმში მოდის.”</p><b>ნინო, მოლარე-კონსულტანტის სცენარი</b></article>
+          <article class="quote"><p>“საწყობში უხილავი საქმე ჩანს მაშინ, როცა მაღაზიაში არაფერი აკლია. ჩემი სიზუსტე პირდაპირ აისახება მომხმარებლის გამოცდილებაზე.”</p><b>გიორგი, საწყობის ადმინისტრატორის სცენარი</b></article>
+          <article class="quote"><p>“მენეჯერისთვის მთავარი მხოლოდ კონტროლი არ არის. უნდა დაინახო გუნდი, მარაგი, სტანდარტი და გაყიდვების შესაძლებლობა ერთ სურათად.”</p><b>თამარი, რეგიონალური მენეჯერის სცენარი</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>პირობები, რომლებიც მნიშვნელობას ქმნის</h2>
+        <p>საჯაროდ გამოქვეყნებულ ვაკანსიებში Way Mart ხაზს უსვამს სამუშაო გრაფიკს, ბონუსის შესაძლებლობას, ჯანმრთელობის დაზღვევას, ტრანსპორტირების მხარდაჭერას და კარიერულ განვითარებას.</p>
+      </div>
+      <div class="benefits">
+        <article class="benefit"><span class="icon">+</span><h3>ჯანმრთელობის დაზღვევა</h3><p>ვაკანსიებში ხშირად მითითებული ბენეფიტი, რომელიც სტაბილურობის განცდას აძლიერებს.</p></article>
+        <article class="benefit"><span class="icon">↗</span><h3>ბონუსი და ზრდა</h3><p>როლის მიხედვით შესაძლებელია ბონუსური სისტემა და კარიერული განვითარების გზა.</p></article>
+        <article class="benefit"><span class="icon">↔</span><h3>ტრანსპორტირების მხარდაჭერა</h3><p>მოძრაობაზე აგებულ ბრენდში გადაადგილების მხარდაჭერა პრაქტიკული უპირატესობაა.</p></article>
+        <article class="benefit"><span class="icon">◎</span><h3>მკაფიო სტანდარტები</h3><p>სისუფთავე, მარაგები, სალარო და მომსახურება წინასწარ განსაზღვრული პროცესებით იმართება.</p></article>
+        <article class="benefit"><span class="icon">24</span><h3>ცვლის კულტურა</h3><p>ზოგ როლში გრაფიკი ცვლებზეა აგებული, რაც მარკეტის ყოველდღიურ რეალობას ასახავს.</p></article>
+        <article class="benefit"><span class="icon">WM</span><h3>დიდი ქსელის გამოცდილება</h3><p>70-ზე მეტ სადგურზე წარმოდგენილი ბრენდი კარგ სკოლას ქმნის საცალო ვაჭრობისთვის.</p></article>
+      </div>
+    </section>
+
+    <section id="apply">
+      <div class="embed-wrap">
+        <article class="apply-card">
+          <div>
+            <p class="eyebrow">შემდეგი ნაბიჯი</p>
+            <h2>შეავსე განაცხადი და აირჩიე როლი, სადაც შენი ენერგია ყველაზე კარგად იმუშავებს.</h2>
+            <p>ქვემოთ ჩაშენებულია მოწოდებული ChatGPT გაზიარებული კონტექსტი. განაცხადის ოფიციალური ბმული კი გადაგიყვანს Way Mart-ის რეკრუტინგის ფორმაზე.</p>
+          </div>
+          <div class="apply-links">
+            <a class="button primary" href="https://waymart.selfrecruit.ge/e8e7ca79-c3fc-475c-9c01-bfde96354572" target="_blank" rel="noreferrer">ოფიციალური განაცხადი <span>→</span></a>
+            <a class="button secondary" href="https://sgp.ge/way-mart" target="_blank" rel="noreferrer">Way Mart-ის გვერდი <span>→</span></a>
+            <a class="button secondary" href="https://chatgpt.com/share/6ab540fb-7afc-83ed-9b41-36cf7bb948d3" target="_blank" rel="noreferrer">ChatGPT კონტექსტი <span>→</span></a>
+          </div>
+        </article>
+        <iframe class="chat-embed" src="https://chatgpt.com/share/6ab540fb-7afc-83ed-9b41-36cf7bb948d3" title="ჩაშენებული ChatGPT კონტექსტი"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <div class="social-strip">
+    <b>თვალი ადევნე Way Mart-ს ციფრულ არხებზე</b>
+    <div class="socials">
+      <a class="button secondary" href="https://www.facebook.com/WayMartGeorgia/" target="_blank" rel="noreferrer">Facebook</a>
+      <a class="button secondary" href="https://www.tiktok.com/@waymart" target="_blank" rel="noreferrer">TikTok</a>
+      <a class="button secondary" href="https://sgp.ge/way-mart" target="_blank" rel="noreferrer">SGP</a>
+    </div>
+  </div>
+  <footer>
+    წყაროები: SOCAR/SGP-ის Way Mart გვერდი, Way Mart-ის საჯარო ვაკანსიების გვერდი, HRGeorgia-ს კომპანიის პროფილი და BMG-ის Way Mart-ის გაფართოების სტატია. გვერდი შექმნილია კარიერული კომუნიკაციის პროტოტიპად.
+  </footer>
+</body>
+</html>
